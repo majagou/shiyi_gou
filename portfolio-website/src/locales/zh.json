@@ -1,0 +1,31 @@
+{
+  "nav": {
+    "about": "关于",
+    "portfolio": "作品集"
+  },
+  "hero": {
+    "greeting": "你好，我是苟诗意",
+    "name": "苟诗意",
+    "role": "软件工程师 & 设计师",
+    "tagline": "我专注于打造简洁、用心的数字产品——从想法到界面。",
+    "cta": "查看作品",
+    "contact": {
+      "email": "邮箱",
+      "github": "GitHub",
+      "linkedin": "领英"
+    }
+  },
+  "about": {
+    "heading": "关于我",
+    "intro": "我是一名软件工程师，喜欢把复杂的问题转化为简单、精致的产品。我的工作涵盖前端开发、产品设计以及两者之间的一切，始终注重清晰、匠心与细节。"
+  },
+  "portfolio": {
+    "heading": "作品集",
+    "subheading": "我做过的一些项目",
+    "close": "关闭",
+    "viewOnGithub": "在 GitHub 上查看"
+  },
+  "footer": {
+    "rights": "版权所有。"
+  }
+}

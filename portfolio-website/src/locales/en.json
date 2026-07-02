@@ -1,0 +1,31 @@
+{
+  "nav": {
+    "about": "About",
+    "portfolio": "Portfolio"
+  },
+  "hero": {
+    "greeting": "Hi, I'm Shiyi Gou",
+    "name": "Shiyi Gou",
+    "role": "Software Engineer & Designer",
+    "tagline": "I build clean, thoughtful digital products — from idea to interface.",
+    "cta": "View my work",
+    "contact": {
+      "email": "Email",
+      "github": "GitHub",
+      "linkedin": "LinkedIn"
+    }
+  },
+  "about": {
+    "heading": "About",
+    "intro": "I'm a software engineer who enjoys turning complex problems into simple, well-crafted products. My work spans frontend engineering, product design, and everything in between — with a focus on clarity, craft, and detail."
+  },
+  "portfolio": {
+    "heading": "Portfolio",
+    "subheading": "A selection of things I've built",
+    "close": "Close",
+    "viewOnGithub": "View on GitHub"
+  },
+  "footer": {
+    "rights": "All rights reserved."
+  }
+}
