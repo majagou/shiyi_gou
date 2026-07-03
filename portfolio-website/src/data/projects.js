@@ -23,6 +23,12 @@ import hriWipe from '../assets/HRI/wipe.gif'
 import hriPickUp from '../assets/HRI/pick-up.gif'
 import hriPauseHeard from '../assets/HRI/pause-heard.gif'
 
+import cocoCover from '../assets/coco/cover.jpeg'
+import cocoKeychain from '../assets/coco/keychain.jpg'
+import cocoTeddy from '../assets/coco/teddy.webp'
+import cocoCover1 from '../assets/coco/Cover1.webp'
+import cocoCover2 from '../assets/coco/Cover2.webp'
+
 
 export const projects = [
   {
@@ -215,4 +221,46 @@ export const projects = [
       }
     ]
   },
+  {
+    id: "coco",
+    coverImage: cocoCover,
+    tags: ["Product Design", "Prototyping", "Arduino"],
+    title: {
+      en: "CoCo — The Communication Companion",
+      zh: "CoCo — 传递爱的陪伴玩偶"
+    },
+    githubUrls: [
+      { label: "View on Blog", url: "https://blockpraktikumexperiencedesign.wordpress.com/2025/03/18/coco-the-communication-companion/" }
+    ],
+    content: [
+      {
+        type: "text",
+        en: "Parents and children share a bond built on closeness — but there are moments when a parent can't be right there: still commuting home when it's already bedtime, or a child feeling homesick during a sleepover at grandma's. As part of a four-person team, I helped design CoCo, a connected cuddle toy that lets parents send their voice — a lullaby, a bedtime story, a few encouraging words — straight into their child's hands, no screen involved.",
+        zh: "父母和孩子之间的亲密感，常常会在一些特定时刻受到考验：还在下班路上赶回家，孩子却已经到了睡觉时间；或者孩子在爷爷奶奶家过夜，突然开始想家。作为四人小组的一员，我参与设计了 CoCo——一个能让父母把自己的声音（一首摇篮曲、一个睡前故事、几句鼓励的话）直接传递到孩子手中的联网玩偶，全程不需要任何屏幕。"
+      },
+      {
+        type: "text",
+        en: "The concept has two connected parts: a small keychain teddy for the parent, with a heart-shaped button that records a personal voice message and sends it with one press — and a cuddle teddy for the child, whose LED heart glows softly when a new message arrives. A hug activates playback, turning a simple embrace into the moment the message plays.",
+        zh: "整个概念由两个相连的部分组成：一个给父母随身携带的钥匙扣小熊，胸前有一个心形按钮，按一下就能录制并发送一条语音消息；以及给孩子的大玩偶熊，收到新消息时，它的 LED 心形灯会缓缓亮起。孩子只需给它一个拥抱，就会触发语音播放，让拥抱本身成为收到消息的那个瞬间。"
+      },
+      { type: "image", src: cocoKeychain, caption: { en: "From sketch to working prototype: the parent's keychain teddy", zh: "从草图到实体原型：父母的钥匙扣小熊" } },
+      { type: "image", src: cocoTeddy, caption: { en: "From sketch to plush: the child's cuddle teddy", zh: "从草图到毛绒玩偶：孩子的大玩偶熊" } },
+      {
+        type: "text",
+        en: "I led the product concept and owned the physical prototype: building and programming the Arduino-based LED heart circuit, wiring it into the plush toy, and 3D-printing a heart-shaped enclosure to house the electronics cleanly inside. Getting a functioning LED circuit to sit invisibly inside a soft, huggable toy — without exposed wires poking through fabric — took a few iterations of the enclosure design before it felt safe and natural for a child to hold.",
+        zh: "我主导了产品概念设计，并负责了物理原型的搭建：基于 Arduino 搭建并编程了 LED 心形灯电路，将其接入毛绒玩偶内部，并 3D 打印了一个心形外壳来整洁地容纳电子元件。要让一个能正常工作的 LED 电路，不露痕迹地藏进一个柔软、适合拥抱的玩偶里——不能有电线戳出布料——外壳设计经过了几轮迭代，才最终达到让孩子安全自然地抱在怀里的效果。"
+      },
+      { type: "image", src: cocoCover1 },
+      { type: "image", src: cocoCover2 },
+      {
+        type: "embed",
+        src: "https://www.youtube.com/embed/OiywJXhyFyo"
+      },
+      {
+        type: "text",
+        en: "We mapped out real use cases — a parent still commuting home, a child's first day at kindergarten, a sleepover at relatives' — and storyboarded the emotional arc from sending a message to the child falling asleep comforted. It was a good reminder that a product concept only really proves itself once you've built the thing and it works in someone's hands, not just on paper.",
+        zh: "我们梳理了几个真实使用场景——父母还在下班路上、孩子第一天上幼儿园、在亲戚家过夜——并绘制了从发送消息到孩子安心入睡的完整情感故事板。这个项目也提醒了我：一个产品概念只有真正做出来、放进使用者手里能正常运作，才算是真正被验证过，而不只是停留在纸面上。"
+      }
+    ]
+  }
 ]
