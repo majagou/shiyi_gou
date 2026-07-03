@@ -14,8 +14,15 @@ import theHiddensPuzzle from '../assets/TheHiddens/Puzzle.PNG'
 import theHiddensPortal from '../assets/TheHiddens/Portal.PNG'
 import theHiddensLRZ from '../assets/TheHiddens/LRZ.jpg'
 
-import cover2 from '../assets/project-2-cover.jpg'
-import cover3 from '../assets/project-3-cover.jpg'
+import hriCover from '../assets/HRI/hri-cover.jpeg'
+import hriConcept from '../assets/HRI/concept.png'
+import hriPointingToTarget from '../assets/HRI/pointing-to-target.gif'
+import hriTargetSelected from '../assets/HRI/target-selected.gif'
+import hriTargetReached from '../assets/HRI/target-reached.gif'
+import hriWipe from '../assets/HRI/wipe.gif'
+import hriPickUp from '../assets/HRI/pick-up.gif'
+import hriPauseHeard from '../assets/HRI/pause-heard.gif'
+
 
 export const projects = [
   {
@@ -149,5 +156,63 @@ export const projects = [
       { type: "image", src: theHiddensLRZ, caption: { en: "LRZ showcase", zh: "LRZ 展示现场" } },
     ]
   },
-  
+  {
+    id: "hri-shared-workspace",
+    coverImage: hriCover,
+    tags: ["Robotics", "ROS2", "Human-Robot Interaction"],
+    title: {
+      en: "Shared-Workspace Awareness — Human-Robot Interaction",
+      zh: "共享工作空间感知系统 — 人机交互"
+    },
+    githubUrl: "https://github.com/ChristophPoelt/Shared-Workspace-Awareness",
+    content: [
+      {
+        type: "text",
+        en: "In a cluttered kitchen, a robot arm moving without warning is unsettling — even dangerous. This project imagined a smart-kitchen assistant: a human gives voice commands via Whisper speech recognition, and a Kinova Gen3 arm responds — but always signals its intent through gesture before it moves, so its human partner knows what's coming.",
+        zh: "在一个杂乱的厨房环境里，机械臂如果毫无预警地移动，是很让人不安的——甚至有风险。这个项目设想了一个智能厨房助手场景：用户通过 Whisper 语音识别下达指令，Kinova Gen3 机械臂做出响应——但在真正移动之前，会先用手势表明自己的意图，让协作者始终心里有数。"
+      },
+      { type: "image", src: hriConcept, caption: { en: "Concept sketch: voice-commanded kitchen assistant", zh: "概念草图：语音指令驱动的厨房助手" } },
+      {
+        type: "text",
+        en: "I designed the full gesture taxonomy the system relies on and built the overall ROS2 architecture connecting voice input, target logic, and motion execution. My teammate handled the Whisper integration and the angle calculations for moving toward a selected target — a natural split between the interaction design/systems side and the perception/motion-math side.",
+        zh: "我负责了整套手势分类体系的设计，以及连接语音输入、目标逻辑与动作执行的整体 ROS2 架构开发。我的队友负责了 Whisper 的语音识别集成，以及选定目标后的角度计算——这是交互设计与系统架构、和感知与运动计算之间比较自然的分工。"
+      },
+      {
+        type: "text",
+        en: "The gesture system covers three categories. Directional gestures show where the arm is headed:",
+        zh: "手势系统分为三类。首先是方向性手势，表明机械臂即将前往的位置："
+      },
+      { type: "image", src: hriPointingToTarget,caption: { en: "Directional gesture: pointing to target", zh: "方向性手势：指向目标" }, size: "half" },
+      {
+        type: "text",
+        en: "State gestures confirm what the system currently understands — that a target has been selected, or that it's been reached:",
+        zh: "状态性手势用于确认系统当前的理解状态——目标已被选定，或已经到达目标："
+      },
+      { type: "image", src: hriTargetSelected,caption: { en: "State gesture: target selected", zh: "状态性手势：目标已选定" }, size: "half" },
+      { type: "image", src: hriTargetReached, caption: { en: "State gesture: target reached", zh: "状态性手势：目标已到达" }, size: "half" },
+      {
+        type: "text",
+        en: "Behavioral gestures make the intended action itself unmistakable before it happens — a distinct wipe motion versus a pickup motion:",
+        zh: "行为性手势让即将执行的具体动作在发生前就一目了然——擦拭动作与拾取动作有着明显不同的姿态："
+      },
+      { type: "image", src: hriWipe,caption: { en: "Behavioral gesture: wipe", zh: "行为性手势：擦拭" }, size: "half" },
+      { type: "image", src: hriPickUp, caption: { en: "Behavioral gesture: pickup", zh: "行为性手势：拾取" }, size: "half" },
+      {
+        type: "text",
+        en: "Getting these to actually read clearly took iteration — an early version of the directional gesture was ambiguous, so I refined it into a clearer motion. I also built an interruption-control gesture so the arm visibly acknowledges a stop command rather than just halting silently:",
+        zh: "要让这些手势真正清晰易懂，经过了不少迭代——早期版本的方向手势含义比较模糊，我后来把它优化成了更清晰的动作。我还设计了一个中断控制手势，让机械臂在收到停止指令时会有明确的响应动作，而不是悄无声息地直接停下："
+      },
+      { type: "image", src: hriPauseHeard, caption: { en: "Behavioral gesture: pause heard", zh: "行为性手势：已听到暂停指令" }, size: "half" },
+      {
+        type: "text",
+        en: "On the architecture side, I built strict gating logic so the arm only moves when it's genuinely safe to (target selected, arm armed, joint states available), an emergency-stop mechanism with proper pause/abort/continue behavior, and validated communication across a VM and remote server setup via CycloneDDS — plus a demo mode and real-robot mode sharing identical gesture logic, so testing never diverged from real hardware behavior.",
+        zh: "在架构层面，我实现了严格的门控逻辑，确保机械臂只有在真正安全的条件下才会移动（目标已选定、机械臂已激活、关节状态数据可用），搭建了带有暂停/中止/继续行为的紧急停止机制，并通过 CycloneDDS 验证了跨虚拟机与远程服务器环境下的通信可靠性——同时提供了共享同一套手势逻辑的演示模式与真实机器人模式，确保测试环境与真实硬件行为始终一致。"
+      },
+      {
+        type: "text",
+        en: "The core lesson: safety in human-robot collaboration isn't just about stopping a robot when something goes wrong — it's about making its intentions legible enough that things rarely go wrong in the first place.",
+        zh: "这个项目最核心的收获是：人机协作中的安全性，不仅仅在于出问题时能及时停止机器人，更在于让机器人的意图足够清晰易懂，从一开始就尽量减少出问题的可能。"
+      }
+    ]
+  },
 ]

@@ -122,7 +122,9 @@ export default function ProjectModal({ project, onClose }) {
                     <img
                       src={block.src}
                       alt={block.caption?.[lang] ?? title}
-                      className="w-full max-w-full rounded-2xl object-cover"
+                      className={`max-w-full rounded-2xl object-cover ${
+                        block.size === 'half' ? 'mx-auto w-1/2' : 'w-full'
+                      }`}
                     />
                     {block.caption && (
                       <figcaption className="mt-2 text-center text-xs text-ink/50">
