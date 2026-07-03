@@ -48,6 +48,13 @@ import safetyBuddyMascot from '../assets/safetybuddy/safety-buddy-mascot.png'
 import safetyBuddyAccessibility from '../assets/safetybuddy/safety-buddy-accessibility.png'
 import safetyBuddyScamBlocker from '../assets/safetybuddy/safety-buddy-scam-blocker.png'
 
+import arfoldVisionSketch from '../assets/arfold/arfold-vision-sketch.jpg'
+import arfoldFirstPrototype from '../assets/arfold/arfold-first-prototype.png'
+import arfoldHoneycombConcept from '../assets/arfold/arfold-honeycomb-concept.jpg'
+import arfoldHoneycombTesting from '../assets/arfold/arfold-honeycomb-testing.png'
+import arfoldFinalPrototype from '../assets/arfold/arfold-final-prototype.jpg'
+import arfoldMarketingVideo from '../assets/arfold/marketing.mp4'
+
 
 export const projects = [
   {
@@ -387,6 +394,53 @@ export const projects = [
         type: "text",
         en: "I also ran user testing throughout, going back to the same senior interviewees to validate whether the app direction actually addressed the anxiety they'd described early on — and refining the design based on what came back. The whole process was a reminder that the first idea, however well-intentioned, isn't always the right one — being willing to test, listen, and pivot mattered more than getting it right on the first try.",
         zh: "我还全程参与了用户测试，回访了最初访谈过的老年用户，验证 App 方向是否真正缓解了他们最初提到的那种焦虑感，并根据反馈不断优化设计。整个过程也让我深刻体会到：第一个想法，哪怕出发点再好，也不一定是最终答案——愿意去测试、倾听、并及时调整方向，比第一次就做对更重要。"
+      }
+    ]
+  },
+  {
+    id: "arfold",
+    coverImage: arfoldHoneycombConcept,
+    tags: ["Product Design", "Prototyping", "Interaction Design"],
+    title: {
+      en: "ARFold — Foldable Helmet with AR Visor",
+      zh: "ARFold — 可折叠 AR 智能头盔"
+    },
+    content: [
+      {
+        type: "text",
+        en: "For a 12-week Design Workshop at LMU, a four-person team imagined Munich in 2035 — a city where cars had given way to bikes, streets had become as crowded as a race, and urban cycling carried real risk. Through interviews with cyclists and pedestrians, we identified a clear need: cyclists needed a way to stay aware of hazards around them without adding bulk or hassle to their ride.",
+        zh: "在 LMU 为期十二周的设计工作坊课程中，四人小组一起构想了 2035 年的慕尼黑——一个汽车让位于自行车、街道拥挤如赛道、城市骑行伴随着真实风险的未来。通过对骑行者与行人的访谈，我们明确了一个核心需求：骑行者需要一种能持续感知周围危险的方式，同时不能给骑行增加负担或麻烦。"
+      },
+      { type: "image", src: arfoldVisionSketch, caption: { en: "Early vision sketch of car-free Munich, 2035", zh: "2035 年无车慕尼黑的早期概念草图" } },
+      {
+        type: "text",
+        en: "I worked on the concept sketching and modeling during ideation, helping the team explore directions before we converged on a foldable helmet with an integrated AR visor — a device that would fold flat for easy carrying and unfold into full head protection, while the visor projected real-time hazard alerts into the rider's field of view.",
+        zh: "在构思阶段，我参与了概念草图与建模工作，帮助团队在收敛到最终方向前探索多种可能性——最终确定的方向是一款可折叠头盔，搭配集成 AR 视觉罩：头盔折叠后便于携带，展开后提供完整头部防护，视觉罩则将实时危险预警投射到骑行者的视野中。"
+      },
+      { type: "image", src: arfoldFirstPrototype, caption: { en: "First-round physical prototype, tested with users", zh: "第一轮物理原型，进行了用户测试" } },
+      {
+        type: "text",
+        en: "User testing on our first prototype was a turning point: testers found the folding mechanism impractical and uncomfortable, and the AR danger visualizations felt more like a video game than a real safety tool. Rather than patching the existing design, we went back to the folding structure itself and found inspiration in honeycomb geometry — solid, flexible, and genuinely comfortable to wear.",
+        zh: "第一版原型的用户测试是一个关键转折点：测试者反馈折叠机构不实用、佩戴不舒适，AR 危险提示的视觉呈现更像电子游戏，而不是真正的安全工具。我们没有在现有设计上小修小补，而是重新审视了折叠结构本身，从蜂窝几何结构中找到了灵感——既结实又灵活，佩戴起来也确实舒适。"
+      },
+      { type: "image", src: arfoldHoneycombConcept, caption: { en: "Revised concept: honeycomb folding structure", zh: "修订后的概念：蜂窝折叠结构" } },
+      {
+        type: "text",
+        en: "I owned the physical prototyping from here: testing paper and styrofoam for the honeycomb structure, iterating on cell density to balance comfort against sturdiness, and working through several folding mechanisms before landing on a moveable frame with integrated gears in the helmet's side pieces. I also worked out the transparent, bendable visor and its AR visual language — redesigning the hazard alerts to read as clean, minimal safety information rather than gamified graphics.",
+        zh: "从这个阶段开始，我主导了物理原型的制作：测试纸材与聚苯乙烯泡沫作为蜂窝结构的材料，反复调整蜂窝密度来平衡舒适度与坚固性，并尝试了多种折叠机构，最终确定了在头盔侧片中集成齿轮的可动框架方案。我还负责了透明可弯曲视觉罩的设计，以及 AR 视觉呈现语言——将危险提示重新设计成简洁、克制的安全信息，而不是游戏化的图形效果。"
+      },
+      { type: "image", src: arfoldHoneycombTesting, caption: { en: "Testing honeycomb density and folding mechanism", zh: "测试蜂窝密度与折叠机构" } },
+      { type: "image", src: arfoldFinalPrototype, caption: { en: "Final prototype with AR visor, worn by a team member", zh: "最终原型，配备 AR 视觉罩，由团队成员试戴展示" } },
+      {
+        type: "text",
+        en: "For the final concept, I also worked on the branding and copywriting: positioning the helmet around mycelium, a biodegradable material with natural shock-absorbing and hydrophobic properties, and framing the business model around peer-to-peer resale and refurbishment to extend the product's life. The honeycomb structure doubled as a visual signature, echoing the wavy silhouette of a classic Coca-Cola bottle — a small detail meant to give the product warmth and a sense of community, not just technical credibility.",
+        zh: "在最终概念阶段，我还负责了品牌定位与文案撰写：围绕菌丝体（Mycelium）这一具有天然缓冲与防水特性的可降解材料展开产品定位，并围绕二手转售与翻新服务构建商业模式，以延长产品的使用寿命。蜂窝结构同时也成为了视觉识别的一部分，呼应经典可口可乐瓶身的波浪形轮廓——这是一个刻意加入的细节，希望产品能传递出温暖感与社区感，而不只是技术上的说服力。"
+      },
+      { type: "video", src: arfoldMarketingVideo, caption: { en: "Branding video", zh: "品牌宣传视频" } },
+      {
+        type: "text",
+        en: "Looking back, this project was really a lesson in listening to user feedback even when it means abandoning work you're attached to. The honeycomb pivot only happened because we took the discomfort seriously instead of defending the original design.",
+        zh: "回过头看，这个项目最大的收获是：即便意味着放弃自己投入过心血的方案，也要认真对待用户反馈。正是因为我们真正正视了测试者反馈的不适感，而不是为原方案辩护，才有了后来转向蜂窝结构的决定。"
       }
     ]
   }
