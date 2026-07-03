@@ -7,6 +7,13 @@ import infoVisCover from '../assets/InfoVis/density.png'
 import infoVisDensityImg from '../assets/InfoVis/timeline.png'
 import infoVisClusterImg from '../assets/InfoVis/network.png'
 
+import theHiddensCover from '../assets/TheHiddens/theHiddensCover.PNG'
+import theHiddensOpeningScene from '../assets/TheHiddens/opening_scene.PNG'
+import theHiddensText from '../assets/TheHiddens/Text.PNG'
+import theHiddensPuzzle from '../assets/TheHiddens/Puzzle.PNG'
+import theHiddensPortal from '../assets/TheHiddens/Portal.PNG'
+import theHiddensLRZ from '../assets/TheHiddens/LRZ.jpg'
+
 import cover2 from '../assets/project-2-cover.jpg'
 import cover3 from '../assets/project-3-cover.jpg'
 
@@ -57,7 +64,7 @@ export const projects = [
       en: "InfoVis Munich — Public Transport Network Visualization",
       zh: "InfoVis Munich — 慕尼黑公共交通网络可视化"
     },
-    githubUrl: [
+    githubUrls: [
       {label: "View on GitHub", url: "https://github.com/majagou/InfoVis-Munich"},
       {label: "View Live", url: "https://majagou.github.io/InfoVis-Munich/"}
     ],
@@ -92,21 +99,55 @@ export const projects = [
     ]
   },
   {
-    id: '3',
-    coverImage: cover3,
-    tags: ['JavaScript', 'REST API', 'Chart.js'],
+    id: "the-hiddens",
+    coverImage: theHiddensCover,
+    tags: ["VR/XR", "Unreal Engine", "Team Lead"],
     title: {
-      en: 'Weather Glass',
-      zh: 'Weather Glass 天气面板',
+      en: "The Hiddens — VR Escape Room",
+      zh: "The Hiddens — VR 密室逃脱"
     },
+    githubUrl: "https://github.com/majagou/The_Hiddens_CAVE",
     content: [
       {
-        type: 'text',
-        en: 'A weather dashboard with a clean glassmorphism-inspired UI, built on a public weather API with live data visualization. Charts rendered with Chart.js update in real time as new readings arrive, and the layout adapts from a dense multi-city view down to a single focused card on mobile.',
-        zh: '基于公共天气 API 打造的天气仪表盘，采用玻璃拟态风格界面，支持实时数据可视化。使用 Chart.js 渲染的图表会随着新数据到来实时更新，页面布局也能从桌面端的多城市密集视图自适应为移动端的单卡片聚焦视图。',
+        type: "text",
+        en: "As team lead, I directed a three-person team to build a horror escape room for the LED CAVE at the Leibniz Supercomputing Centre (LRZ) — a large-scale, projection-based immersive space very different from a standard VR headset setup. Inspired by the eerie corporate atmosphere of Severance, we set out to combine environmental storytelling with puzzle-based interaction.",
+        zh: "作为团队负责人，我带领一个三人小组为 LRZ（莱布尼茨超算中心）的 LED CAVE 打造了一个恐怖密室逃脱项目——这是一个大型投影式沉浸空间，与普通 VR 头显设备的开发方式很不一样。灵感来自《人生切割术》（Severance）中那种诡异的企业氛围，我们的目标是把环境叙事和解谜互动结合在一起。"
       },
-      { type: 'image', src: cover3 },
-      { type: 'video', src: '/media/project-3-demo.mp4' },
-    ],
+      {
+        type: "text",
+        en: "The story casts players as an investigator searching for a missing scientist, Dr. Elisabeth Shaw, who disappeared after uncovering a disturbing secret inside a parallel-dimension corporate facility. Players explore a crime-scene-like apartment, piece together clues, and solve environmental puzzles to reveal what happened to her.",
+        zh: "游戏故事设定玩家扮演一名调查员，追查失踪科学家 Elisabeth Shaw 博士的下落——她在发现一个位于平行维度企业设施中的可怕秘密后失踪。玩家需要在一个如犯罪现场般的公寓中探索，拼凑线索，通过解开环境谜题揭开真相。"
+      },
+      { type: "image", src: theHiddensOpeningScene, caption: { en: "Opening scene of the apartment environment", zh: "公寓场景开场画面" } },
+      { type: "image", src: theHiddensText, caption: { en: "Players can grab and carry physics-enabled objects as part of the puzzle flow.", zh: "玩家可以抓取和携带具有物理特性的对象作为解谜流程的一部分。" } },
+      {
+        type: "text",
+        en: "I owned the core Unreal Engine systems: a physics-based pickup mechanic using controller line-tracing, overlap-based puzzle validation logic, a procedural portal VFX built from animated noise textures, and a highlight/outline system to guide players' attention in the dark. I also built a jumpscare sequence using AI-driven character navigation, timed to trigger as players cross specific zones.",
+        zh: "我负责了核心的 Unreal Engine 系统开发：基于手柄射线检测的物理拾取交互、基于重叠检测的解谜校验逻辑、由动态噪声贴图构建的程序化传送门特效，以及在暗场景中引导玩家注意力的高亮描边系统。此外还实现了基于 AI 角色寻路的 jump scare 惊吓触发序列，在玩家进入特定区域时精确触发。"
+      },
+      { type: "image", src: theHiddensPuzzle, caption: { en: "Overlap-based puzzle validation in action", zh: "基于重叠检测的解谜验证效果" } },
+      { type: "image", src: theHiddensPortal, caption: { en: "Procedural portal VFX", zh: "程序化传送门特效" } },
+      {
+        type: "embed",
+        src: "https://www.youtube.com/embed/25tzcKgVytU",
+        caption: { en: "Concept demo",
+          zh: "概念演示"
+        }
+      },
+      {
+        type: "embed",
+        src: "https://www.youtube.com/embed/MLnuCygSu2c",
+        caption: { en: "CAVE version gameplay demo",
+          zh: "CAVE 版本的游戏演示"
+        }
+      },
+      {
+        type: "text",
+        en: "The project was showcased hands-on at LRZ's Open Lab Day 2024, where visitors experienced the full CAVE installation. Leading a small team through a hardware setup none of us had built for before meant constant coordination between environmental art, technical implementation, and narrative pacing — and seeing visitors genuinely startled by the jumpscare on demo day was a pretty good sign it worked.",
+        zh: "项目在 LRZ 2024 年 Open Lab Day 上进行了现场体验展示，访客们亲身体验了完整的 CAVE 装置。带领一个小团队开发一个我们都没有经验的硬件平台，意味着需要在环境美术、技术实现和叙事节奏之间持续协调——在展示当天看到访客真的被 jump scare 吓到，也算是对效果的一个不错的验证。"
+      },
+      { type: "image", src: theHiddensLRZ, caption: { en: "LRZ showcase", zh: "LRZ 展示现场" } },
+    ]
   },
+  
 ]

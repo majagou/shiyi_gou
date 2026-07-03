@@ -135,24 +135,36 @@ export default function ProjectModal({ project, onClose }) {
 
               if (block.type === 'video') {
                 return (
-                  <video
-                    key={index}
-                    src={block.src}
-                    controls
-                    className="aspect-video w-full max-w-full rounded-2xl bg-ink/5"
-                  />
+                  <figure key={index}>
+                    <video
+                      src={block.src}
+                      controls
+                      className="aspect-video w-full max-w-full rounded-2xl bg-ink/5"
+                    />
+                    {block.caption && (
+                      <figcaption className="mt-2 text-center text-xs text-ink/50">
+                        {block.caption[lang]}
+                      </figcaption>
+                    )}
+                  </figure>
                 )
               }
 
               if (block.type === 'embed') {
                 return (
-                  <iframe
-                    key={index}
-                    src={block.src}
-                    title={`${title} embed ${index + 1}`}
-                    allowFullScreen
-                    className="aspect-video w-full max-w-full rounded-2xl bg-ink/5"
-                  />
+                  <figure key={index}>
+                    <iframe
+                      src={block.src}
+                      title={block.caption?.[lang] ?? `${title} embed ${index + 1}`}
+                      allowFullScreen
+                      className="aspect-video w-full max-w-full rounded-2xl bg-ink/5"
+                    />
+                    {block.caption && (
+                      <figcaption className="mt-2 text-center text-xs text-ink/50">
+                        {block.caption[lang]}
+                      </figcaption>
+                    )}
+                  </figure>
                 )
               }
 
