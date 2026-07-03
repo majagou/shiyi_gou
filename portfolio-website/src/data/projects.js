@@ -39,6 +39,15 @@ import waterFoamSimulationEffect from '../assets/water/foam_simulation_effect.pn
 import waterUnderwaterEffect from '../assets/water/underwater_effect.png'
 import waterlineEffect from '../assets/water/waterline_effect.png'
 
+import safetyBuddyCover from '../assets/safetybuddy/safety-buddy-cover.jpg'
+import safetyBuddyRobotHand from '../assets/safetybuddy/safety-buddy-robot-hand.png'
+import safetyBuddyAppWireframe from '../assets/safetybuddy/safety-buddy-app-wireframe.png'
+import safetyBuddyWordCrosser from '../assets/safetybuddy/safety-buddy-word-crosser.png'
+import safetyBuddyFillWords from '../assets/safetybuddy/safety-buddy-fill-words.png'
+import safetyBuddyMascot from '../assets/safetybuddy/safety-buddy-mascot.png'
+import safetyBuddyAccessibility from '../assets/safetybuddy/safety-buddy-accessibility.png'
+import safetyBuddyScamBlocker from '../assets/safetybuddy/safety-buddy-scam-blocker.png'
+
 
 export const projects = [
   {
@@ -124,7 +133,7 @@ export const projects = [
   {
     id: "the-hiddens",
     coverImage: theHiddensCover,
-    tags: ["VR/XR", "Unreal Engine", "Team Lead"],
+    tags: ["VR/XR", "Unreal Engine", "Game Design"],
     title: {
       en: "The Hiddens — VR Escape Room",
       zh: "The Hiddens — VR 密室逃脱"
@@ -276,7 +285,7 @@ export const projects = [
   {
     id: "realistic-water-shader",
     coverImage: waterCover,
-    tags: ["Unreal Engine", "Shader/Material", "Technical Art"],
+    tags: ["Unreal Engine", "Shader/Material", "Computer Graphics"],
     title: {
       en: "Realistic Water Shader",
       zh: "写实水体材质开发"
@@ -325,6 +334,59 @@ export const projects = [
         type: "text",
         en: "This project was really an exercise in the kind of work Technical Artists do every day: bridging an artistic goal (water that just looks and feels right) with hard engine constraints (mesh resolution, render passes, shader cost) — and being systematic enough about debugging to actually find the real cause instead of guessing.",
         zh: "这个项目其实很好地体现了 Technical Artist 日常的工作方式：在艺术目标（让水看起来、感觉起来是对的）和引擎的实际限制（网格精度、渲染通道、材质开销）之间找到平衡——并且在调试问题时保持足够系统化，真正定位到根本原因，而不是靠猜。"
+      }
+    ]
+  },
+  {
+    id: "safety-buddy",
+    coverImage: safetyBuddyCover,
+    tags: ["UX Research", "Accessibility", "Product Design"],
+    title: {
+      en: "Safety Buddy — Anti-Fraud App for Seniors",
+      zh: "Safety Buddy — 老年人防诈骗应用"
+    },
+    content: [
+      {
+        type: "text",
+        en: "The design challenge was open-ended: create a learning experience for seniors navigating a digital world full of fast-moving change. Rather than guessing at the problem, our team went straight to the source — direct interviews with seniors revealed their single biggest pain point was spam and scam attempts, and the anxiety that came with not knowing how to spot them.",
+        zh: "这是一个开放式的设计课题：为在快速变化的数字世界中摸索的老年人，设计一段学习体验。我们没有直接猜测问题所在，而是直接找到用户本人——通过与老年人的直接访谈，发现他们最大的困扰是垃圾邮件和诈骗信息，以及不知道如何识别这些骗局所带来的焦虑感。"
+      },
+      { type: "image", src: safetyBuddyRobotHand, caption: { en: "Iteration 1: robotic hand prototype for gesture-based, punctual help", zh: "第一次迭代：手势交互式机械手原型，提供即时帮助" } },
+      {
+        type: "text",
+        en: "Our first direction was a physical solution: a gesture-controlled robotic hand offering direct, on-demand help. I built and tested this prototype myself. After running it past users, the team concluded a physical device wasn't the right fit for how seniors actually wanted support in the moment, and we pivoted toward a software-based approach instead — one that could reach people through devices they already used daily.",
+        zh: "最初的方向是一个物理解决方案：手势控制的机械手，提供即时的按需帮助。我亲自搭建并测试了这个原型。在用户测试之后，团队判断物理设备并不符合老年人实际期望获得帮助的方式，于是转向了基于软件的方案——通过他们日常已经在使用的设备来触达用户。"
+      },
+      { type: "image", src: safetyBuddyAppWireframe, caption: { en: "Iteration 2: early app wireframes — high contrast, minimalistic, game-based learning", zh: "第二次迭代：早期 App 线框图 — 高对比度、极简风格、游戏化学习" } },
+      {
+        type: "text",
+        en: "The app direction centered on high contrast, minimalism, and game-based learning — accessible by default, not as an afterthought. I focused on the gamification layer, designing word-based mini-games (a word-search puzzle and a fill-in-the-blank crossword) that teach key terms like phishing, spam, and scam through play rather than a wall of text.",
+        zh: "App 方向的核心是高对比度、极简设计与游戏化学习——无障碍设计从一开始就是核心考量，而不是事后补充。我主要负责了游戏化部分的设计，设计了以文字为核心的小游戏（字谜搜索与填字游戏），通过互动的方式教会用户识别 phishing、spam、scam 等关键术语，而不是让用户面对一大段文字说明。"
+      },
+      { type: "image", src: safetyBuddyWordCrosser, caption: { en: "Word-search game teaching key security terms", zh: "教授安全相关术语的字谜搜索游戏" } },
+      { type: "image", src: safetyBuddyFillWords, caption: { en: "Fill-in-the-blank crossword game", zh: "填字游戏" } },
+      {
+        type: "text",
+        en: "The final concept combined two things in one app: a scam blocker that detects and flags spam or scam content in emails and text messages, and a learning platform that walks users through why something was flagged. A mascot named Buddy accompanies users through the whole experience, giving a sense of guidance and protection rather than leaving people to figure it out alone.",
+        zh: "最终概念将两个功能整合进一个 App：一个能识别并标记邮件与短信中诈骗内容的拦截功能，以及一个解释“为什么这条信息被标记”的学习平台。一个名叫 Buddy 的吉祥物贯穿整个使用体验，给用户一种被陪伴、被保护的感觉，而不是让他们独自摸索。"
+      },
+      { type: "image", src: safetyBuddyMascot, caption: { en: "Buddy — the mascot guiding users through the app", zh: "Buddy — 陪伴用户使用 App 的吉祥物" } },
+      {
+        type: "text",
+        en: "Accessibility was designed in from the ground up: an ivory background with dark gray text for high contrast, a color palette checked against red-green color blindness, adjustable text size and volume, a read-aloud function for every explanation, and an onboarding video to walk first-time users through the app before they're on their own.",
+        zh: "无障碍设计从一开始就融入了整体方案：象牙白背景搭配深灰色文字以保证高对比度，配色方案经过红绿色盲适配验证，可调节的文字大小与音量，每个说明文本都配有朗读功能，以及一个引导视频，帮助新用户在独立使用前先熟悉整个 App。"
+      },
+      { type: "image", src: safetyBuddyAccessibility, caption: { en: "Accessibility settings and onboarding flow", zh: "无障碍设置与新手引导流程" } },
+      {
+        type: "text",
+        en: "The scam blocker flags suspicious emails directly, explaining in plain language why a message looks like a scam and what to do next. The learning app walks users through unfamiliar terms with Buddy's help, then tests that understanding through a spam-email simulation where users practice spotting red flags themselves.",
+        zh: "拦截功能会直接标记可疑邮件，用通俗易懂的语言解释这条信息为什么像是诈骗，以及接下来应该怎么做。学习模块则由 Buddy 陪伴用户逐一解释陌生术语，再通过一个垃圾邮件模拟练习，让用户自己动手识别可疑信号，检验学习成果。"
+      },
+      { type: "image", src: safetyBuddyScamBlocker, caption: { en: "Scam blocker prototype flagging a suspicious email", zh: "拦截功能原型 — 标记可疑邮件" }, size: "half" },
+      {
+        type: "text",
+        en: "I also ran user testing throughout, going back to the same senior interviewees to validate whether the app direction actually addressed the anxiety they'd described early on — and refining the design based on what came back. The whole process was a reminder that the first idea, however well-intentioned, isn't always the right one — being willing to test, listen, and pivot mattered more than getting it right on the first try.",
+        zh: "我还全程参与了用户测试，回访了最初访谈过的老年用户，验证 App 方向是否真正缓解了他们最初提到的那种焦虑感，并根据反馈不断优化设计。整个过程也让我深刻体会到：第一个想法，哪怕出发点再好，也不一定是最终答案——愿意去测试、倾听、并及时调整方向，比第一次就做对更重要。"
       }
     ]
   }
