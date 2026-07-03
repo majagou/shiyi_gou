@@ -29,6 +29,16 @@ import cocoTeddy from '../assets/coco/teddy.webp'
 import cocoCover1 from '../assets/coco/Cover1.webp'
 import cocoCover2 from '../assets/coco/Cover2.webp'
 
+import waterCover from '../assets/water/water-cover.png'
+import waterHero from '../assets/water/water-hero.png'
+import waterInitialWaveSetup from '../assets/water/initial_wave_setup.png'
+import waterEnhancedTexturalEffect from '../assets/water/enhanced_textural_effect.png'
+import waterInitialCaustics from '../assets/water/initial_caustics.png'
+import waterEnhancedCaustics from '../assets/water/enhanced_caustics.png'
+import waterFoamSimulationEffect from '../assets/water/foam_simulation_effect.png'
+import waterUnderwaterEffect from '../assets/water/underwater_effect.png'
+import waterlineEffect from '../assets/water/waterline_effect.png'
+
 
 export const projects = [
   {
@@ -260,6 +270,61 @@ export const projects = [
         type: "text",
         en: "We mapped out real use cases — a parent still commuting home, a child's first day at kindergarten, a sleepover at relatives' — and storyboarded the emotional arc from sending a message to the child falling asleep comforted. It was a good reminder that a product concept only really proves itself once you've built the thing and it works in someone's hands, not just on paper.",
         zh: "我们梳理了几个真实使用场景——父母还在下班路上、孩子第一天上幼儿园、在亲戚家过夜——并绘制了从发送消息到孩子安心入睡的完整情感故事板。这个项目也提醒了我：一个产品概念只有真正做出来、放进使用者手里能正常运作，才算是真正被验证过，而不只是停留在纸面上。"
+      }
+    ]
+  },
+  {
+    id: "realistic-water-shader",
+    coverImage: waterCover,
+    tags: ["Unreal Engine", "Shader/Material", "Technical Art"],
+    title: {
+      en: "Realistic Water Shader",
+      zh: "写实水体材质开发"
+    },
+    githubUrl: "https://github.com/majagou/RealisticWaterBuildUp",
+    content: [
+      {
+        type: "text",
+        en: "Water is one of the hardest things to fake convincingly in real-time graphics — it needs to move, catch light, distort what's behind it, and behave differently above and below the surface, all without tanking performance. This solo project builds a full real-time water system in Unreal Engine 5.4, combining procedural waves, depth-based shading, foam, caustics, and an underwater camera transition into one working material.",
+        zh: "水体是实时图形渲染中最难做到以假乱真的效果之一——它需要有动态、能反射光线、能扭曲背后的景物，并且在水上和水下要呈现完全不同的视觉效果，同时还不能拖慢渲染性能。这是一个独立完成的项目，在 Unreal Engine 5.4 中搭建了一套完整的实时水体系统，把程序化波浪、基于深度的着色、泡沫、水面焦散光斑，以及水上水下的镜头过渡效果，全部整合进一套可用的材质系统。"
+      },
+      { type: "image", src: waterHero, caption: { en: "Final water shader in a small test scene", zh: "小场景中的最终水体材质效果" } },
+      {
+        type: "text",
+        en: "The wave motion started with Gerstner waves for large-scale surface movement. But an early version of the wave setup didn't deform convincingly — the mesh simply didn't have enough resolution for the displacement to read smoothly.",
+        zh: "波浪运动最初基于 Gerstner 波形算法实现大尺度的水面起伏。但早期版本的波浪效果并不理想——网格精度不够，导致位移形变无法平滑呈现。"
+      },
+      { type: "image", src: waterInitialWaveSetup, caption: { en: "Initial wave setup — visible mesh limitations under displacement", zh: "早期波浪设置 — 网格精度不足导致的形变问题" } },
+      {
+        type: "text",
+        en: "I traced the issue to insufficient mesh density and rebuilt the base mesh at higher resolution in 3ds Max, then layered in normal maps for fine ripple detail and refined the surface texture — the difference in how convincingly light and motion read across the surface was immediate.",
+        zh: "我追查发现问题出在网格密度不足，于是在 3ds Max 中重新制作了更高精度的基础网格，并叠加法线贴图来呈现细小的涟漪细节，进一步优化了表面纹理——水面上光影与动态的可信度立刻有了明显提升。"
+      },
+      { type: "image", src: waterEnhancedTexturalEffect, caption: { en: "Enhanced surface texture and ripple detail", zh: "优化后的表面纹理与涟漪细节" } },
+      {
+        type: "text",
+        en: "Caustics — the shifting light patterns water casts on surfaces below it — went through the same kind of iteration. The first version was flat and static; refining the animation and light response made it feel like real projected light rather than a painted-on texture.",
+        zh: "焦散光斑效果（水面在水下物体表面投射出的动态光斑）也经历了类似的迭代过程。最初的版本比较平淡、缺乏动态感；通过优化动画节奏和光照响应，最终呈现出更接近真实投影光线的效果，而不是一张贴上去的静态纹理。"
+      },
+      { type: "image", src: waterInitialCaustics, caption: { en: "Initial caustics — flat, static light pattern", zh: "早期焦散效果 — 光斑较为平淡、缺乏动态" } },
+      { type: "image", src: waterEnhancedCaustics, caption: { en: "Enhanced caustics — dynamic, more convincing light projection", zh: "优化后的焦散效果 — 动态感更强、光影更真实" } },
+      {
+        type: "text",
+        en: "Foam needed to appear automatically wherever geometry intersected the water surface, without manual placement — a procedural mask driven by depth and intersection detection handles this in real time.",
+        zh: "泡沫效果需要在任何物体与水面相交的地方自动生成，而不需要手动摆放——通过基于深度与相交检测驱动的程序化遮罩，实现了实时生成效果。"
+      },
+      { type: "image", src: waterFoamSimulationEffect, caption: { en: "Procedural foam masking around intersecting geometry", zh: "基于相交检测的程序化泡沫效果" } },
+      {
+        type: "text",
+        en: "Getting the underwater effect right was its own debugging exercise. I built a stencil mask to separate above-water and underwater rendering, but the water surface kept darkening incorrectly. After digging into the render settings, I found two culprits — Render in Depth Pass and Affect Dynamic Indirect Lighting — that were interfering with the mask. Turning both off resolved it, and I added a waterline split-view effect for smooth camera transitions between the two states.",
+        zh: "水下效果的调试也花了一番功夫。我搭建了一个 Stencil 遮罩来区分水上与水下的渲染，但水面却一直出现不正常的变暗问题。深入排查渲染设置后，发现是两个选项在干扰遮罩效果——Render in Depth Pass 和 Affect Dynamic Indirect Lighting，关闭这两项后问题解决。此外还加入了水位线分屏效果，让镜头在水上水下两种状态之间可以平滑过渡。"
+      },
+      { type: "image", src: waterUnderwaterEffect, caption: { en: "Underwater post-process haze effect", zh: "水下后处理雾化效果" } },
+      { type: "image", src: waterlineEffect, caption: { en: "Waterline split-view transition", zh: "水位线分屏过渡效果" } },
+      {
+        type: "text",
+        en: "This project was really an exercise in the kind of work Technical Artists do every day: bridging an artistic goal (water that just looks and feels right) with hard engine constraints (mesh resolution, render passes, shader cost) — and being systematic enough about debugging to actually find the real cause instead of guessing.",
+        zh: "这个项目其实很好地体现了 Technical Artist 日常的工作方式：在艺术目标（让水看起来、感觉起来是对的）和引擎的实际限制（网格精度、渲染通道、材质开销）之间找到平衡——并且在调试问题时保持足够系统化，真正定位到根本原因，而不是靠猜。"
       }
     ]
   }
