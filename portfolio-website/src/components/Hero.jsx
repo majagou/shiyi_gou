@@ -1,6 +1,6 @@
 import { useTranslation } from 'react-i18next'
 import ContactLinks from './ContactLinks'
-import heroBg from '../assets/hero-bg.png'
+import heroBg from '../assets/hero-bg.webp'
 
 export default function Hero() {
   const { t } = useTranslation()

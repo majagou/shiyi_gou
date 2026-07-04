@@ -140,8 +140,12 @@ export default function ProjectModal({ project, onClose }) {
                   <figure key={index}>
                     <video
                       src={block.src}
-                      controls
-                      className="aspect-video w-full max-w-full rounded-2xl bg-ink/5"
+                      {...(block.loop
+                        ? { autoPlay: true, loop: true, muted: true, playsInline: true }
+                        : { controls: true })}
+                      className={`max-w-full rounded-2xl object-cover bg-ink/5 ${
+                        block.loop ? '' : 'aspect-video'
+                      } ${block.size === 'half' ? 'mx-auto w-1/2' : 'w-full'}`}
                     />
                     {block.caption && (
                       <figcaption className="mt-2 text-center text-xs text-ink/50">

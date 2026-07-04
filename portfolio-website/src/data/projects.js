@@ -1,58 +1,58 @@
-import thermalVRCover from '../assets/ThermalVR/ThermalVRCover.png'
-import thermalHotImg from '../assets/ThermalVR/ThermalHot.png'
-import thermalColdImg from '../assets/ThermalVR/ThermalCold.png'
-import thermalNeutralImg from '../assets/ThermalVR/ThermalNeutral.png'
+import thermalVRCover from '../assets/ThermalVR/ThermalVRCover.webp'
+import thermalHotImg from '../assets/ThermalVR/ThermalHot.webp'
+import thermalColdImg from '../assets/ThermalVR/ThermalCold.webp'
+import thermalNeutralImg from '../assets/ThermalVR/ThermalNeutral.webp'
 
-import infoVisCover from '../assets/InfoVis/density.png'
-import infoVisDensityImg from '../assets/InfoVis/timeline.png'
-import infoVisClusterImg from '../assets/InfoVis/network.png'
+import infoVisCover from '../assets/InfoVis/density.webp'
+import infoVisDensityImg from '../assets/InfoVis/timeline.webp'
+import infoVisClusterImg from '../assets/InfoVis/network.webp'
 
-import theHiddensCover from '../assets/TheHiddens/theHiddensCover.PNG'
-import theHiddensOpeningScene from '../assets/TheHiddens/opening_scene.PNG'
-import theHiddensText from '../assets/TheHiddens/Text.PNG'
-import theHiddensPuzzle from '../assets/TheHiddens/Puzzle.PNG'
-import theHiddensPortal from '../assets/TheHiddens/Portal.PNG'
-import theHiddensLRZ from '../assets/TheHiddens/LRZ.jpg'
+import theHiddensCover from '../assets/TheHiddens/theHiddensCover.webp'
+import theHiddensOpeningScene from '../assets/TheHiddens/opening_scene.webp'
+import theHiddensText from '../assets/TheHiddens/Text.webp'
+import theHiddensPuzzle from '../assets/TheHiddens/Puzzle.webp'
+import theHiddensPortal from '../assets/TheHiddens/Portal.webp'
+import theHiddensLRZ from '../assets/TheHiddens/LRZ.webp'
 
-import hriCover from '../assets/HRI/hri-cover.jpeg'
-import hriConcept from '../assets/HRI/concept.png'
-import hriPointingToTarget from '../assets/HRI/pointing-to-target.gif'
-import hriTargetSelected from '../assets/HRI/target-selected.gif'
-import hriTargetReached from '../assets/HRI/target-reached.gif'
-import hriWipe from '../assets/HRI/wipe.gif'
-import hriPickUp from '../assets/HRI/pick-up.gif'
-import hriPauseHeard from '../assets/HRI/pause-heard.gif'
+import hriCover from '../assets/HRI/hri-cover.webp'
+import hriConcept from '../assets/HRI/concept.webp'
+import hriPointingToTarget from '../assets/HRI/pointing-to-target.mp4'
+import hriTargetSelected from '../assets/HRI/target-selected.mp4'
+import hriTargetReached from '../assets/HRI/target-reached.mp4'
+import hriWipe from '../assets/HRI/wipe.mp4'
+import hriPickUp from '../assets/HRI/pick-up.mp4'
+import hriPauseHeard from '../assets/HRI/pause-heard.mp4'
 
-import cocoCover from '../assets/coco/cover.jpeg'
-import cocoKeychain from '../assets/coco/keychain.jpg'
+import cocoCover from '../assets/coco/cover.webp'
+import cocoKeychain from '../assets/coco/keychain.webp'
 import cocoTeddy from '../assets/coco/teddy.webp'
 import cocoCover1 from '../assets/coco/Cover1.webp'
 import cocoCover2 from '../assets/coco/Cover2.webp'
 
-import waterCover from '../assets/water/water-cover.png'
-import waterHero from '../assets/water/water-hero.png'
-import waterInitialWaveSetup from '../assets/water/initial_wave_setup.png'
-import waterEnhancedTexturalEffect from '../assets/water/enhanced_textural_effect.png'
-import waterInitialCaustics from '../assets/water/initial_caustics.png'
-import waterEnhancedCaustics from '../assets/water/enhanced_caustics.png'
-import waterFoamSimulationEffect from '../assets/water/foam_simulation_effect.png'
-import waterUnderwaterEffect from '../assets/water/underwater_effect.png'
-import waterlineEffect from '../assets/water/waterline_effect.png'
+import waterCover from '../assets/water/water-cover.webp'
+import waterHero from '../assets/water/water-hero.webp'
+import waterInitialWaveSetup from '../assets/water/initial_wave_setup.webp'
+import waterEnhancedTexturalEffect from '../assets/water/enhanced_textural_effect.webp'
+import waterInitialCaustics from '../assets/water/initial_caustics.webp'
+import waterEnhancedCaustics from '../assets/water/enhanced_caustics.webp'
+import waterFoamSimulationEffect from '../assets/water/foam_simulation_effect.webp'
+import waterUnderwaterEffect from '../assets/water/underwater_effect.webp'
+import waterlineEffect from '../assets/water/waterline_effect.webp'
 
-import safetyBuddyCover from '../assets/safetybuddy/safety-buddy-cover.jpg'
-import safetyBuddyRobotHand from '../assets/safetybuddy/safety-buddy-robot-hand.png'
-import safetyBuddyAppWireframe from '../assets/safetybuddy/safety-buddy-app-wireframe.png'
-import safetyBuddyWordCrosser from '../assets/safetybuddy/safety-buddy-word-crosser.png'
-import safetyBuddyFillWords from '../assets/safetybuddy/safety-buddy-fill-words.png'
-import safetyBuddyMascot from '../assets/safetybuddy/safety-buddy-mascot.png'
-import safetyBuddyAccessibility from '../assets/safetybuddy/safety-buddy-accessibility.png'
-import safetyBuddyScamBlocker from '../assets/safetybuddy/safety-buddy-scam-blocker.png'
+import safetyBuddyCover from '../assets/safetybuddy/safety-buddy-cover.webp'
+import safetyBuddyRobotHand from '../assets/safetybuddy/safety-buddy-robot-hand.webp'
+import safetyBuddyAppWireframe from '../assets/safetybuddy/safety-buddy-app-wireframe.webp'
+import safetyBuddyWordCrosser from '../assets/safetybuddy/safety-buddy-word-crosser.webp'
+import safetyBuddyFillWords from '../assets/safetybuddy/safety-buddy-fill-words.webp'
+import safetyBuddyMascot from '../assets/safetybuddy/safety-buddy-mascot.webp'
+import safetyBuddyAccessibility from '../assets/safetybuddy/safety-buddy-accessibility.webp'
+import safetyBuddyScamBlocker from '../assets/safetybuddy/safety-buddy-scam-blocker.webp'
 
-import arfoldVisionSketch from '../assets/arfold/arfold-vision-sketch.jpg'
-import arfoldFirstPrototype from '../assets/arfold/arfold-first-prototype.png'
-import arfoldHoneycombConcept from '../assets/arfold/arfold-honeycomb-concept.jpg'
-import arfoldHoneycombTesting from '../assets/arfold/arfold-honeycomb-testing.png'
-import arfoldFinalPrototype from '../assets/arfold/arfold-final-prototype.jpg'
+import arfoldVisionSketch from '../assets/arfold/arfold-vision-sketch.webp'
+import arfoldFirstPrototype from '../assets/arfold/arfold-first-prototype.webp'
+import arfoldHoneycombConcept from '../assets/arfold/arfold-honeycomb-concept.webp'
+import arfoldHoneycombTesting from '../assets/arfold/arfold-honeycomb-testing.webp'
+import arfoldFinalPrototype from '../assets/arfold/arfold-final-prototype.webp'
 import arfoldMarketingVideo from '../assets/arfold/marketing.mp4'
 
 
@@ -214,27 +214,27 @@ export const projects = [
         en: "The gesture system covers three categories. Directional gestures show where the arm is headed:",
         zh: "手势系统分为三类。首先是方向性手势，表明机械臂即将前往的位置："
       },
-      { type: "image", src: hriPointingToTarget,caption: { en: "Directional gesture: pointing to target", zh: "方向性手势：指向目标" }, size: "half" },
+      { type: "video", src: hriPointingToTarget, caption: { en: "Directional gesture: pointing to target", zh: "方向性手势：指向目标" }, size: "half", loop: true },
       {
         type: "text",
         en: "State gestures confirm what the system currently understands — that a target has been selected, or that it's been reached:",
         zh: "状态性手势用于确认系统当前的理解状态——目标已被选定，或已经到达目标："
       },
-      { type: "image", src: hriTargetSelected,caption: { en: "State gesture: target selected", zh: "状态性手势：目标已选定" }, size: "half" },
-      { type: "image", src: hriTargetReached, caption: { en: "State gesture: target reached", zh: "状态性手势：目标已到达" }, size: "half" },
+      { type: "video", src: hriTargetSelected, caption: { en: "State gesture: target selected", zh: "状态性手势：目标已选定" }, size: "half", loop: true },
+      { type: "video", src: hriTargetReached, caption: { en: "State gesture: target reached", zh: "状态性手势：目标已到达" }, size: "half", loop: true },
       {
         type: "text",
         en: "Behavioral gestures make the intended action itself unmistakable before it happens — a distinct wipe motion versus a pickup motion:",
         zh: "行为性手势让即将执行的具体动作在发生前就一目了然——擦拭动作与拾取动作有着明显不同的姿态："
       },
-      { type: "image", src: hriWipe,caption: { en: "Behavioral gesture: wipe", zh: "行为性手势：擦拭" }, size: "half" },
-      { type: "image", src: hriPickUp, caption: { en: "Behavioral gesture: pickup", zh: "行为性手势：拾取" }, size: "half" },
+      { type: "video", src: hriWipe, caption: { en: "Behavioral gesture: wipe", zh: "行为性手势：擦拭" }, size: "half", loop: true },
+      { type: "video", src: hriPickUp, caption: { en: "Behavioral gesture: pickup", zh: "行为性手势：拾取" }, size: "half", loop: true },
       {
         type: "text",
         en: "Getting these to actually read clearly took iteration — an early version of the directional gesture was ambiguous, so I refined it into a clearer motion. I also built an interruption-control gesture so the arm visibly acknowledges a stop command rather than just halting silently:",
         zh: "要让这些手势真正清晰易懂，经过了不少迭代——早期版本的方向手势含义比较模糊，我后来把它优化成了更清晰的动作。我还设计了一个中断控制手势，让机械臂在收到停止指令时会有明确的响应动作，而不是悄无声息地直接停下："
       },
-      { type: "image", src: hriPauseHeard, caption: { en: "Behavioral gesture: pause heard", zh: "行为性手势：已听到暂停指令" }, size: "half" },
+      { type: "video", src: hriPauseHeard, caption: { en: "Behavioral gesture: pause heard", zh: "行为性手势：已听到暂停指令" }, size: "half", loop: true },
       {
         type: "text",
         en: "On the architecture side, I built strict gating logic so the arm only moves when it's genuinely safe to (target selected, arm armed, joint states available), an emergency-stop mechanism with proper pause/abort/continue behavior, and validated communication across a VM and remote server setup via CycloneDDS — plus a demo mode and real-robot mode sharing identical gesture logic, so testing never diverged from real hardware behavior.",

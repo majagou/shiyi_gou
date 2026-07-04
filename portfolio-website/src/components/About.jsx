@@ -1,6 +1,6 @@
 import { useTranslation } from 'react-i18next'
 import { skills } from '../data/skills'
-import headshot from '../assets/headshot.jpg'
+import headshot from '../assets/headshot.webp'
 
 export default function About() {
   const { t, i18n } = useTranslation()
