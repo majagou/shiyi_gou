@@ -10,19 +10,21 @@ const ICONS = {
 }
 
 export default function ContactLinks() {
-  const { t } = useTranslation()
+  const { t, i18n } = useTranslation()
+  const lang = i18n.resolvedLanguage === 'zh' ? 'zh' : 'en'
 
   return (
     <div className="flex items-center gap-3">
       {contact.map(({ id, href }) => {
         const Icon = ICONS[id]
         const label = t(`hero.contact.${id}`)
-        const isExternal = href.startsWith('http')
+        const resolvedHref = typeof href === 'string' ? href : href[lang]
+        const isExternal = resolvedHref.startsWith('http')
 
         return (
           <a
             key={id}
-            href={href}
+            href={resolvedHref}
             aria-label={label}
             title={label}
             target={isExternal ? '_blank' : undefined}

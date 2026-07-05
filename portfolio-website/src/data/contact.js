@@ -1,7 +1,10 @@
 export const contact = [
   {
     id: 'email',
-    href: 'mailto:goumaja@gmail.com',
+    href: {
+      en: 'mailto:goumaja@gmail.com',
+      zh: 'mailto:shiyigou0926@163.com',
+    },
   },
   {
     id: 'github',
