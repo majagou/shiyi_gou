@@ -21,6 +21,14 @@ export default function About() {
 
         <div className="text-center md:text-left">
           <p className="text-lg leading-relaxed text-ink/70">{t('about.intro')}</p>
+          <ul className="mt-6 space-y-3 text-left">
+            {t('about.highlights', { returnObjects: true }).map((item) => (
+              <li key={item} className="flex gap-3 text-base leading-relaxed text-ink/70">
+                <span className="mt-2.5 h-1.5 w-1.5 shrink-0 rounded-full bg-ink/30" />
+                <span>{item}</span>
+              </li>
+            ))}
+          </ul>
         </div>
       </div>
 
@@ -33,10 +41,10 @@ export default function About() {
             <ul className="mt-3 flex flex-wrap justify-center gap-3 md:justify-start">
               {group.skills.map((skill) => (
                 <li
-                  key={skill}
+                  key={skill.en}
                   className="rounded-full bg-cream-dim px-4 py-2 text-sm font-medium shadow-sm transition hover:scale-105"
                 >
-                  {skill}
+                  {skill[lang]}
                 </li>
               ))}
             </ul>

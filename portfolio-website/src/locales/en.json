@@ -6,8 +6,8 @@
   "hero": {
     "greeting": "Hi, I'm Shiyi Gou",
     "name": "Shiyi Gou",
-    "role": "Software Engineer & Designer",
-    "tagline": "I build clean, thoughtful digital products — from idea to interface.",
+    "role": "Where People, Tech & Design Meet",
+    "tagline": "I connect people, technology, and design to build products that actually make sense.",
     "cta": "View my work",
     "contact": {
       "email": "Email",
@@ -17,7 +17,12 @@
   },
   "about": {
     "heading": "About",
-    "intro": "I'm a software engineer who enjoys turning complex problems into simple, well-crafted products. My work spans frontend engineering, product design, and everything in between — with a focus on clarity, craft, and detail."
+    "intro": "I work at the intersection of people, technology, and design — using research to understand what users actually need, then translating that into products that are technically sound and genuinely usable.",
+    "highlights": [
+      "One year of B2B program management experience, coordinating stakeholders and delivering learning programs for clients including d-fine, Rohde & Schwarz, and Allianz",
+      "Background spanning UX research, XR/robotics development, and data visualization — comfortable speaking the language of engineers, designers, and business stakeholders alike",
+      "Actively use AI-assisted workflows (prompt engineering, vibe coding) to move faster from idea to working prototype"
+    ]
   },
   "portfolio": {
     "heading": "Portfolio",
